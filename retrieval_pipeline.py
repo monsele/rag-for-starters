@@ -113,7 +113,8 @@ def start_chat():
             print("Goodbye!")
             break
             
-        ask_question(question)
+        answer = ask_question(question)
+        print(f"\nAnswer: {answer}")
 
 if __name__ == "__main__":
     start_chat()
