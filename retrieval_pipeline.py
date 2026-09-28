@@ -61,7 +61,10 @@ def ask_question(user_question):
         ] + chat_history + [
             HumanMessage(content=f"New question: {user_question}")
         ]
-        
+        print()
+        print("--- Messages sent for rewrite ---")
+        for m in messages:
+            print(f"[{m.type}] {m.content}")
         result = model.invoke(messages)
         search_question = result.content.strip()
         print(f"Searching for: {search_question}")
